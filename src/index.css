@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+/* ============================================================
+   GOSD 2026 · 视觉体系 v3（对齐 osdg-brand 专业设计体系）
+   浅色阅读模式 = paper #F3F8FA / 深色演示模式 = navy #0A2C49
+   设计令牌来源: github.com/X-lab2017/osdg-brand
+   ============================================================ */
+
+:root, html[data-theme='light'] {
+  --bg: #f3f8fa;
+  --surface: #ffffff;
+  --pale: #e5f0f4;
+  --ink: #10334d;
+  --muted: #4c697b;
+  --line: #cadce5;
+  --brand: #156993;
+  --cyan: #007d87;
+  --gold: #e7c652;
+  --gold-text: #886400;
+  --navy: #0a2c49;
+  --p1: #279fa9;
+  --p2: #4e87c5;
+  --p3: #9973b7;
+  --p4: #82ae53;
+  /* 图表序列色板（浅色底，顺序使用） */
+  --c1: #156993; --c2: #279fa9; --c3: #4e87c5; --c4: #9973b7;
+  --c5: #5c8a3c; --c6: #c08a2d; --c7: #8c5b3f; --c8: #6b7f8c;
+  --map-empty: #e0ebf0;
+  --chart-axis: #b9cdd8;
+  --chart-split: #dde9ee;
+  --chart-text: #4c697b;
+  --shadow: 0 14px 34px -20px rgba(16, 51, 77, .35);
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --bg: #0a2c49;
+  --surface: #123b58;
+  --pale: #123750;
+  --ink: #f6fbff;
+  --muted: #bad2de;
+  --line: #3a657d;
+  --brand: #76d5e4;
+  --cyan: #67d5db;
+  --gold: #f2d15c;
+  --gold-text: #f2d15c;
+  --navy: #072641;
+  --p1: #68c8cc;
+  --p2: #77a9de;
+  --p3: #ad8acc;
+  --p4: #a0c86c;
+  --c1: #76d5e4; --c2: #68c8cc; --c3: #77a9de; --c4: #ad8acc;
+  --c5: #a0c86c; --c6: #f2d15c; --c7: #e8a06a; --c8: #8fa9bb;
+  --map-empty: #123750;
+  --chart-axis: #3a657d;
+  --chart-split: #234e66;
+  --chart-text: #bad2de;
+  --shadow: 0 18px 40px -20px rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+
+body {
+  font-family: Inter, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+::selection { background: color-mix(in srgb, var(--gold) 45%, transparent); }
+
+/* ---- 语义化板块 ---- */
+.surf {
+  background:
+    radial-gradient(1100px 500px at 92% -10%, color-mix(in srgb, var(--cyan) 8%, transparent), transparent 60%),
+    radial-gradient(900px 460px at 4% 110%, color-mix(in srgb, var(--brand) 8%, transparent), transparent 60%),
+    var(--bg);
+  color: var(--ink);
+}
+.surf-alt {
+  background: var(--navy);
+  color: #f6fbff;
+}
+.surf-alt .gv-muted { color: #9ebdcc; }
+.surf-alt .gv-sub { color: #bad2de; }
+
+/* ---- 语义化组件 ---- */
+.gv-kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: .26em;
+  text-transform: uppercase; color: var(--cyan);
+}
+.surf-alt .gv-kicker { color: var(--cyan); }
+.gv-h2 { font-size: clamp(26px, 3.4vw, 40px); font-weight: 800; line-height: 1.3; letter-spacing: -.01em; color: var(--ink); }
+.gv-h3 { font-size: 20px; font-weight: 700; color: var(--ink); }
+.gv-sub { color: var(--muted); line-height: 1.9; }
+.gv-muted { color: var(--muted); }
+.gv-ink { color: var(--ink); }
+
+.gv-panel {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.gv-panel-title { font-size: 14px; font-weight: 700; color: var(--ink); }
+.gv-panel-sub { font-size: 11.5px; color: var(--muted); }
+
+.gv-num { font-weight: 900; color: var(--gold-text); font-variant-numeric: tabular-nums; }
+.gv-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 4px 12px; font-size: 11px; font-weight: 600; color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.gv-tab {
+  border: 1px solid var(--line); color: var(--muted);
+  border-radius: 999px; padding: 7px 16px; font-size: 12.5px; font-weight: 600;
+  transition: all .18s; white-space: nowrap;
+}
+.gv-tab:hover { color: var(--ink); border-color: var(--brand); }
+.gv-tab[aria-selected='true'] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.surf-alt .gv-tab[aria-selected='true'] { background: var(--gold); color: #0a2c49; border-color: var(--gold); }
+
+.gv-card {
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface); padding: 20px;
+  transition: transform .18s, box-shadow .18s;
+}
+.gv-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.gv-table { width: 100%; font-size: 13px; border-collapse: collapse; }
+.gv-table th { text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--line); font-weight: 600; }
+.gv-table td { padding: 9px 10px; border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent); color: var(--ink); }
+
+/* ---- 兼容旧类名（逐步淘汰） ---- */
+.gosd-paper, .hero-watercolor, .hero-watercolor-soft, .dash-dark, .dash-dark-alt, .gosd-ink, .gosd-carrier-flat {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ---- 滚动条 ---- */
+.dash-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+.dash-scroll::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--brand) 45%, transparent); border-radius: 3px; }

@@ -1,6 +1,6 @@
 /** 极简 CSV 解析：适用于仓库 data/processed 下不带引号转义的规范 CSV */
 export function parseCsv(text: string): Record<string, string>[] {
-  const lines = text.replace(/\r/g, '').split('\n').filter(l => l.trim());
+  const lines = text.replace(/^﻿/, '').replace(/\r/g, '').split('\n').filter(l => l.trim());
   if (lines.length < 2) return [];
   const headers = lines[0].split(',').map(h => h.trim());
   return lines.slice(1).map(line => {
